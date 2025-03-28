@@ -43,9 +43,8 @@ A comprehensive system monitoring tool with real-time process tracking, threat d
 
 
 ###FLOWCHART
-![WhatsApp Image 2025-03-28 at 18 20 18](https://github.com/user-attachments/assets/d5418d99-3b25-430f-826d-9cfda63f25c4)
-![WhatsApp Image 2025-03-28 at 18 20 18 (1)](https://github.com/user-attachments/assets/78cfb4af-62fc-451f-9f45-27f2b5aff609)
-![WhatsApp Image 2025-03-28 at 18 20 18 (2)](https://github.com/user-attachments/assets/d1722d5c-b92d-4eee-9aac-e763ab68a44e)
+![FLOWCHART](https://github.com/user-attachments/assets/775bc242-1f1d-4d52-8381-767170a8828f)
+
 
 
 
