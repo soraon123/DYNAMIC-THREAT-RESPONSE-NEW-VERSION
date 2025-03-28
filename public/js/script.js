@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const memoryChartCtx = document.getElementById('memory-chart').getContext('2d');
 
     let cpuThreshold = 70;
-    let refreshInterval = 1000; // Default to 1 second
+    let refreshInterval = 1000;
     let intervalId;
 
     const warningBox = document.getElementById("cpu-warning");

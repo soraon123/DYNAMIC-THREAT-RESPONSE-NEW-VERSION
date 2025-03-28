@@ -19,7 +19,6 @@ app.use('/api', apiRoutes);
 initializeDatabase().then(() => {
     app.listen(PORT, () => {
         console.log(`Server running on http://localhost:${PORT}`);
-        // Start process monitoring
         require('./utils/processMonitor').startMonitoring();
     });
 });
