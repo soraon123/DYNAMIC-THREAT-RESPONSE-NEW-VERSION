@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Monitor Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Process Monitor Dashboard</h1>
+            <div class="system-stats">
+                <div class="stat">
+                    <span class="label">CPU Usage:</span>
+                    <span class="value" id="cpu-usage">0%</span>
+                    <span id="cpu-rating" class="cpu-rating">Normal</span> <!-- Added CPU Rating -->
+                </div>
+                <div class="stat">
+                    <span class="label">Memory Usage:</span>
+                    <span class="value" id="memory-usage">0%</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Threshold:</span>
+                    <input type="number" id="cpu-threshold" min="1" max="100" value="50">
+                    <span class="unit">%</span>
+                    <button id="update-threshold">Update</button>
+                </div>
+                <div class="stat">
+                    <label for="refresh-rate">Refresh Rate:</label>
+                    <select id="refresh-rate">
+                        <option value="1000" selected>1s</option>
+                        <option value="2000">2s</option>
+                        <option value="5000">5s</option>
+                        <option value="10000">10s</option>
+                        <option value="15000">15s</option>
+                        <option value="30000">30s</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <!-- Warning Box for CPU Alerts -->
+        <div id="cpu-warning" class="warning-box" style="display: none;">
+            <p id="warning-message"></p>
+        </div>
+
+        <div class="dashboard">
+            <div class="chart-container">
+                <h2>CPU Usage Graph</h2>
+                <canvas id="cpu-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Memory Usage Graph</h2>
+                <canvas id="memory-chart"></canvas>
+            </div>
+
+            <div class="process-list">
+                <h2>Running Processes</h2>
+                <table id="process-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>PID</th>
+                            <th>CPU %</th>
+                            <th>Memory %</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="history">
+                <h2>Recent Events</h2>
+                <table id="history-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Process</th>
+                            <th>PID</th>
+                            <th>CPU %</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
